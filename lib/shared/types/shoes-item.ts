@@ -1,4 +1,4 @@
-export interface IItem {
+export interface IShoesItem {
     id: number;
     image: string;
     price: number;

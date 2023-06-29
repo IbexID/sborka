@@ -1,5 +1,18 @@
 @import 'shared/styles/app.scss';
 
 .cartButton{
-
+ position: relative;
+ &__count {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background-color: $blueBackgroundColor;
+    top: -5px;
+    right: -5px;
+    font-size: 10px;
+    color: $mainBackgroundColor;
+    font-family: $mainFont;
+ }
 }

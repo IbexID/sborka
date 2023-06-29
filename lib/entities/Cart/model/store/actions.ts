@@ -1,6 +1,9 @@
 import { useMemo } from "react";
 import { bindActionCreators } from "redux";
 import { useAppDispatch } from "shared/hooks/redux";
-export const cartActions = () => {
-  const dispatch = useMemo(() => useAppDispatch(), []);
+import { actions } from "./slice";
+
+export const useCartActions = () => {
+  const dispatch = useAppDispatch();
+  return useMemo(() => bindActionCreators(actions, dispatch), [dispatch]);
 };

@@ -3,7 +3,7 @@ import { FC, ReactNode } from "react";
 interface IFCWithChildren {
     children?: ReactNode;
 }
-interface IFCWithClassName {
+export interface IFCWithClassName {
     className?: string;
 }
 

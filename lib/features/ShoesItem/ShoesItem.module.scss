@@ -1,0 +1,22 @@
+@import "shared/styles/app.scss";
+
+.shoesItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 300px;
+  padding: 29px 11px 11px 11px;
+  border: $border;
+  &__info {
+    display: grid;
+    grid-template: 1fr 40px / 40px 1fr;
+    gap: 13px 15px;
+    align-items: center;
+    padding: 4px;
+  }
+  &__title {
+    grid-column: span 2;
+    max-width: 165px;
+  }
+}

@@ -1,13 +1,21 @@
-import { Logo } from 'shared/ui/Logo';
-import styles from './Header.module.scss';
-import { FCC } from 'shared/types';
-import { CartButton } from 'shared/ui';
+import { CartButton, Logo } from "shared/ui";
+import { useAppSelector } from "shared/hooks/redux";
+import { FCC } from "shared/types";
+import styles from "./Header.module.scss";
+import { useCartActions } from "entities/Cart/model/store/actions";
 
 export const Header: FCC = () => {
-    return (
-        <header className={styles.header}>
-            <Logo />
-            <CartButton />
-        </header>
-    );
+  const items = useAppSelector((state) => state.cart.items);
+  const { addToCart, clear } = useCartActions();
+  return (
+    <header className={styles.header}>
+      <Logo />
+      <CartButton
+        onClick={() => {
+          clear()
+        }}
+        count={items.length}
+      />
+    </header>
+  );
 };

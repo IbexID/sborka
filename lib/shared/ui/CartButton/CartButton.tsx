@@ -4,13 +4,14 @@ import { SvgCart } from "../svg";
 
 interface ICartButton {
   count: number;
+  onClick: () => void;
 }
 
-export const CartButton: FC<ICartButton> = ({ count }) => {
+export const CartButton: FC<ICartButton> = ({ count, onClick }) => {
   return (
-    <button className={styles.cartButton}>
+    <button onClick={onClick} className={styles.cartButton}>
       <SvgCart />
-      <span>{count}</span>
+      <span className={styles.cartButton__count}>{count || 0}</span>
     </button>
   );
 };
