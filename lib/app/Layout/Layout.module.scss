@@ -1,0 +1,8 @@
+@import "shared/styles/app.scss";
+
+.layout {
+    background-color: $mainBackgroundColor;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

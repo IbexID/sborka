@@ -1,0 +1,14 @@
+@import "shared/styles/app.scss";
+
+.logo {
+    position: relative;
+    width: min-content;
+  &__text {
+    font-size: 18px;
+    height: 21px;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    translate: 100% 0;
+  }
+}

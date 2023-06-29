@@ -15,7 +15,13 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@lib/*": ["./src/*"]
+      "shared/*": ["./lib/shared/*"],
+      "widgets/*": ["./lib/widgets/*"],
+      "features/*": ["./lib/features/*"],
+      "app/*": ["./lib/app/*"],
+      "processes/*": ["./lib/processes/*"],
+      "pages/*": ["./lib/pages/*"],
+      "entities/*": ["./lib/entities/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
