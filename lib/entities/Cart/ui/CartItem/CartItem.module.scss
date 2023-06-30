@@ -1,0 +1,46 @@
+@import "shared/styles/app.scss";
+
+.cartItem {
+  width: 330px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__infoName {
+    position: relative;
+    min-height: 32px;
+  }
+
+  &__delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: calc(100% - 3px) 0%;
+  }
+
+  &__controlsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 83px;
+    gap: 5px;
+    > button {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

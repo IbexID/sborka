@@ -1,8 +1,13 @@
 import cl from "classnames";
 import styles from "./titles.module.scss";
-import { FCC, IFCWithClassName } from "shared/types";
+import { FCC } from "shared/types";
 
-export const H2: FCC<IFCWithClassName> = ({ children, className }) => {
+export interface ITitle {
+  className?: string;
+  onClick?: () => void;
+}
+
+export const H2: FCC<ITitle> = ({ children, className, onClick }) => {
   return (
     <h2 className={cl(styles.titles, styles.h2, className)}>{children}</h2>
   );

@@ -4,3 +4,7 @@ export interface IShoesItem {
     price: number;
     title: string;
 }
+
+export interface IShoesItemInCart extends IShoesItem {
+    quantity: number;
+  }

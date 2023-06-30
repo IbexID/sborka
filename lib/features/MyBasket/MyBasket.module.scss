@@ -1,0 +1,12 @@
+@import 'shared/styles/app.scss';
+
+.basket{
+    padding: 40px;
+    border-left: $border;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}

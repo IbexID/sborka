@@ -9,3 +9,8 @@ export interface IFCWithClassName {
 
 export type FCC<T=unknown> = FC<IFCWithChildren & T>
 export type FCL<T=unknown> = FC<IFCWithClassName & T>
+
+export interface IButton {
+    onClick?: () => void;
+    className?: string;
+}

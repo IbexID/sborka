@@ -1,0 +1,6 @@
+@import 'shared/styles/app.scss';
+
+.delete {
+
+    @include borderless-button;
+}

@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import * as I from "./interfaces";
+import { clear } from "console";
+import { getExistingInArrayById } from "shared/utils";
 
 const initialState: I.ICartState = {
   items: [],
@@ -10,10 +12,26 @@ const slice = createSlice({
   initialState,
   reducers: {
     addToCart(state, action: I.IAddToCardPayload) {
-      state.items.push(action.payload);
+      const existingItem = getExistingInArrayById(state.items, action.payload.id)
+      
+      if (existingItem) {
+        state.items[state.items.indexOf(existingItem)].quantity += 1;
+      } else {
+        state.items.push({ ...action.payload, quantity: 1 });
+      }
     },
-    removeFromCart(state, action: I.IRemoveFromCardPayload ) {
+    removeFromCart(state, action: I.IRemoveFromCardPayload) {
       state.items = state.items.filter((item) => item.id !== action.payload);
+    },
+    increaseCount (state, action: I.IHandleQuantityPayload) {
+      const existingItem = getExistingInArrayById(state.items, action.payload)
+      if (!existingItem) return;
+      state.items[state.items.indexOf(existingItem)].quantity += 1;
+    },
+    decreaseCount (state, action: I.IHandleQuantityPayload) {
+      const existingItem = getExistingInArrayById(state.items, action.payload)
+      if (!existingItem || existingItem.quantity <= 1) return;
+      state.items[state.items.indexOf(existingItem)].quantity -= 1;
     },
     clear() {
       return initialState;
