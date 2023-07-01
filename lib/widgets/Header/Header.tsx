@@ -1,9 +1,10 @@
+import { useMemo } from "react";
 import { BurgerButton, CartButton, Logo } from "shared/ui";
 import { useAppSelector } from "shared/hooks/redux";
 import { FCC } from "shared/types";
+import { useNavigate } from "shared/hooks/useNavigate";
 import styles from "./Header.module.scss";
-import { useCartActions } from "entities/Cart/model/store/actions";
-import { useMemo } from "react";
+import { useCartActions } from "entities/Cart/model";
 
 export const Header: FCC = () => {
   const items = useAppSelector((state) => state.cart.items);
@@ -11,14 +12,15 @@ export const Header: FCC = () => {
     () => items.reduce((a, b) => a + b.quantity, 0),
     [items]
   );
-  const { clear } = useCartActions();
+  const { openCart } = useCartActions();
+  const navigate = useNavigate();
   return (
     <header className={styles.header}>
-      <Logo />
+      <Logo onClick={() => navigate("/")} />
       <div className={styles.header__buttons}>
         <CartButton
           onClick={() => {
-            clear();
+              openCart();
           }}
           count={count}
         />

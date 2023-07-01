@@ -6,6 +6,9 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  @include mediaGt {
+    padding-inline: 110px 30px;
+  }
   @include mediaLg {
     padding-left: 110px;
   }
@@ -19,7 +22,7 @@
     border: $border;
     width: 890px;
     aspect-ratio: 890 / 508;
-    @include mediaLg {
+    @include mediaGt {
       width: 570px;
     }
     @include mediaMd {

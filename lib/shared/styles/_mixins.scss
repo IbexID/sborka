@@ -6,6 +6,11 @@
   border: none;
 }
 
+@mixin mediaGt{
+  @media screen and (max-width: $mediaGt) {
+    @content;
+  }
+}
 @mixin mediaLg{
   @media screen and (max-width: $mediaLg) {
     @content;

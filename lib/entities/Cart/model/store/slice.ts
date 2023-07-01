@@ -4,6 +4,7 @@ import { getExistingInArrayById } from "shared/utils";
 
 const initialState: I.ICartState = {
   items: [],
+  isOpen: false,
 };
 
 const slice = createSlice({
@@ -31,6 +32,12 @@ const slice = createSlice({
       const existingItem = getExistingInArrayById(state.items, action.payload)
       if (!existingItem || existingItem.quantity <= 1) return;
       state.items[state.items.indexOf(existingItem)].quantity -= 1;
+    },
+    openCart (state) {
+      state.isOpen = true;
+    },
+    closeCart (state) {
+      state.isOpen = false;
     },
     clear() {
       return initialState;
