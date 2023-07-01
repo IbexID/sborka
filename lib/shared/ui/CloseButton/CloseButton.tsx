@@ -9,7 +9,7 @@ interface ICloseButton {
 
 export const CloseButton: FC<ICloseButton> = ({ onClick, className }) => {
   return (
-    <button onClick={onClick} className={className}>
+    <button title="close" onClick={onClick} className={className}>
       <SvgClose />
     </button>
   );

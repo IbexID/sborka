@@ -6,7 +6,11 @@ import { SvgDelete } from "../svg";
 
 export const DeleteButton: FC<IButton> = ({ className, onClick }) => {
   return (
-    <button onClick={onClick} className={cl(styles.delete, className)}>
+    <button
+      title="remove item from cart"
+      onClick={onClick}
+      className={cl(styles.delete, className)}
+    >
       <SvgDelete />
     </button>
   );

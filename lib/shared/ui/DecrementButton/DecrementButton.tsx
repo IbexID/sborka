@@ -6,7 +6,7 @@ import { SvgDecrement } from "../svg";
 
 export const DecrementButton: FC<IButton> = ({ className, onClick }) => {
   return (
-    <button onClick={onClick} className={cl(styles.decrement, className)}>
+    <button title="decrease item quantity"  onClick={onClick} className={cl(styles.decrement, className)}>
       <SvgDecrement />
     </button>
   );

@@ -8,9 +8,15 @@ interface IButton {
   className?: string;
   onClick: () => void;
 }
-export const Button: FC<IButton> = ({ background, children, onClick, className }) => {
+export const Button: FC<IButton> = ({
+  background,
+  children,
+  onClick,
+  className,
+}) => {
   return (
     <button
+      title="button"
       onClick={onClick}
       className={cl(styles.button, styles[`button--${background}`], className)}
     >

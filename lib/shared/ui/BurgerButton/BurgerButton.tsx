@@ -8,7 +8,7 @@ interface IBurgerButton {
 }
 export const BurgerButton: FC<IBurgerButton> = ({ className }) => {
   return (
-    <button className={cl(styles.burger, className)}>
+    <button title="burger menu" className={cl(styles.burger, className)}>
       <SvgBurger />
     </button>
   );

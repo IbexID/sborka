@@ -8,7 +8,7 @@ interface IAddToCartButton {
 
 export const AddToCartButton: FC<IAddToCartButton> = ({ onClick }) => {
   return (
-    <button onClick={onClick} className={styles.add}>
+    <button title="add item to cart" onClick={onClick} className={styles.add}>
       <SvgCart className={styles.add__icon} />
     </button>
   );

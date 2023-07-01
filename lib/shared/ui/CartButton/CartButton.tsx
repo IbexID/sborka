@@ -9,7 +9,7 @@ interface ICartButton {
 
 export const CartButton: FC<ICartButton> = ({ count, onClick }) => {
   return (
-    <button onClick={onClick} className={styles.cartButton}>
+    <button title="open cart"  onClick={onClick} className={styles.cartButton}>
       <SvgCart />
       <span className={styles.cartButton__count}>{count || 0}</span>
     </button>
