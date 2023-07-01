@@ -1,4 +1,4 @@
-import { IShoesItem } from "shared/types";
+import { IShoesItem } from "../types";
 import { shoesItems } from "./constant";
 
 export const fetchGetShoes = async (): Promise<IShoesItem[]> => {

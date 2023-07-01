@@ -8,4 +8,19 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: $border;
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+    }
+    &__buttonsBurger {
+        display: none;
+        margin-bottom: -1px;
+        @include mediaLg{
+            display: block;
+        }
+        @include mediaMd{
+            display: none;
+        }
+    }
 }

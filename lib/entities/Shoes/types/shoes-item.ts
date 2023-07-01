@@ -3,6 +3,8 @@ export interface IShoesItem {
     image: string;
     price: number;
     title: string;
+    model: string;
+    highResImage?: string;
 }
 
 export interface IShoesItemInCart extends IShoesItem {

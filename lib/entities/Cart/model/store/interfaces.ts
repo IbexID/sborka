@@ -1,5 +1,5 @@
 import { PayloadAction } from "@reduxjs/toolkit";
-import { IShoesItem, IShoesItemInCart } from "shared/types";
+import { IShoesItemInCart, IShoesItem } from "entities/Shoes/types";
 
 
 export interface ICartState {

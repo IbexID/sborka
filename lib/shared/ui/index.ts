@@ -4,3 +4,5 @@ export * from "./CartButton";
 export * from "./DecrementButton";
 export * from "./IncrementButton";
 export * from "./DeleteButton";
+export * from "./Button";
+export * from "./BurgerButton";

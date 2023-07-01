@@ -1,4 +1,4 @@
-import { IShoesItemInCart } from "shared/types";
+import { IShoesItemInCart } from "entities/Shoes/types";
 
 export const getOrderTotalPrice = (arr: IShoesItemInCart[]) => {
   return arr.reduce((a, b) => {

@@ -1,17 +1,24 @@
 import { FC, useCallback } from "react";
 import styles from "./ShoesItem.module.scss";
-import { IShoesItem } from "shared/types";
 import { useCartActions } from "entities/Cart/model";
 import { AddToCartButton } from "shared/ui/AddToCartButton";
 import Image from "next/image";
 import { H3 } from "shared/ui/typography/titles";
 import { PriceValue } from "shared/ui/PriceValue";
 import Link from "next/link";
+import { IShoesItem } from "entities/Shoes/types";
 
-export const ShoesItem: FC<IShoesItem> = ({ id, image, price, title }) => {
+export const ShoesItem: FC<IShoesItem> = ({
+  id,
+  image,
+  price,
+  title,
+  model,
+  highResImage,
+}) => {
   const { addToCart } = useCartActions();
   const addItemToCart = useCallback(() => {
-    addToCart({ id, image, price, title });
+    addToCart({ id, image, price, title, model, highResImage });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const href = "/shoes/" + id;

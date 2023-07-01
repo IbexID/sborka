@@ -1,0 +1,17 @@
+@import "shared/styles/app.scss";
+
+.button {
+  @include borderless-button;
+  padding: 8px 30px;
+  &--blue {
+    font-size: 14px;
+    background-color: $blueBackgroundColor;
+    color: $mainBackgroundColor;
+    line-height: 24px;
+    border-radius: 3px;
+    transition: background 0.2s;
+    &:hover {
+      background-color: rgba($blueBackgroundColor, 0.8);
+    }
+  }
+}

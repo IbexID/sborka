@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import * as I from "./interfaces";
-import { clear } from "console";
 import { getExistingInArrayById } from "shared/utils";
 
 const initialState: I.ICartState = {

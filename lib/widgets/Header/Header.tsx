@@ -1,4 +1,4 @@
-import { CartButton, Logo } from "shared/ui";
+import { BurgerButton, CartButton, Logo } from "shared/ui";
 import { useAppSelector } from "shared/hooks/redux";
 import { FCC } from "shared/types";
 import styles from "./Header.module.scss";
@@ -7,17 +7,23 @@ import { useMemo } from "react";
 
 export const Header: FCC = () => {
   const items = useAppSelector((state) => state.cart.items);
-  const count = useMemo(() => items.reduce((a, b) => a + b.quantity, 0), [items])
+  const count = useMemo(
+    () => items.reduce((a, b) => a + b.quantity, 0),
+    [items]
+  );
   const { clear } = useCartActions();
   return (
     <header className={styles.header}>
       <Logo />
-      <CartButton
-        onClick={() => {
-          clear()
-        }}
-        count={count}
-      />
+      <div className={styles.header__buttons}>
+        <CartButton
+          onClick={() => {
+            clear();
+          }}
+          count={count}
+        />
+        <BurgerButton className={styles.header__buttonsBurger} />
+      </div>
     </header>
   );
 };
