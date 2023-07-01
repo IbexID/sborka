@@ -1,0 +1,24 @@
+@import 'shared/styles/app.scss';
+
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 40px 55px 0 0px;
+    width: 100%;
+    border-top: $border;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item {
+        &, > p {
+            
+        line-height: 34px;
+        }
+    }
+    &__total {
+        font-weight: 700;
+    }
+}

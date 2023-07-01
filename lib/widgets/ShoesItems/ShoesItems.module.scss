@@ -5,4 +5,6 @@
   grid-auto-flow: row;
   grid-template-columns: repeat(3, 250px);
   gap: 50px 70px;
+  flex-grow: 1;
+  justify-content: center;
 }

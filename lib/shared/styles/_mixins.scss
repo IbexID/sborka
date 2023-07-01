@@ -1,5 +1,13 @@
+@import 'media';
+
 @mixin borderless-button {
   offset: none;
   outline: none;
   border: none;
+}
+
+@mixin mediaLg{
+  @media screen and (max-width: $mediaLg) {
+    @content;
+  }
 }

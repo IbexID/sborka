@@ -5,7 +5,7 @@ export const fetchGetShoes = async (): Promise<IShoesItem[]> => {
   return new Promise((res) => {
     setTimeout(() => {
       res(shoesItems);
-    }, 500);
+    }, 250);
   });
 };
 
@@ -13,6 +13,6 @@ export const fetchGetShoesById = async (id: number): Promise<IShoesItem | undefi
   return new Promise((res) => {
     setTimeout(() => {
       res(shoesItems.find((item) => item.id === id));
-    }, 500);
+    }, 250);
   });
 };
