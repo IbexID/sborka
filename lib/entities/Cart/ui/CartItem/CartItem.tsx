@@ -1,10 +1,10 @@
 import { FC } from "react";
 import styles from "./CartItem.module.scss";
-import { IShoesItemInCart } from "shared/types";
 import Image from "next/image";
 import { DecrementButton, DeleteButton, IncrementButton } from "shared/ui";
 import { useCartActions } from "entities/Cart/model";
 import { PriceValue } from "shared/ui/PriceValue";
+import { IShoesItemInCart } from "entities/Shoes/types";
 
 export const CartItem: FC<IShoesItemInCart> = ({
   id,

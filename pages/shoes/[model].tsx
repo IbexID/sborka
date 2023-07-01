@@ -1,8 +1,8 @@
 import { fetchGetShoes, fetchGetShoesById } from "entities/Shoes/api";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { IShoesItem } from "entities/Shoes/types";
+import { GetStaticProps } from "next";
 import { ShoesPage } from "pages/ShoesPage";
 import { FC } from "react";
-import { IShoesItem } from "shared/types";
 import { H2 } from "shared/ui/typography/titles";
 
 export const Shoes: FC<IShoesItem> = (props) => {
@@ -13,9 +13,6 @@ export const Shoes: FC<IShoesItem> = (props) => {
 };
 
 export default Shoes;
-
-
-
 
 export async function getStaticPaths() {
   const shoes = await fetchGetShoes();

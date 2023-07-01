@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from "react";
 import cl from 'classnames';
 import { fetchGetShoes } from "entities/Shoes/api";
-import { IShoesItem } from "shared/types";
 import { ShoesItem } from "features/ShoesItem";
 import styles from "./ShoesItems.module.scss";
+import { IShoesItem } from "entities/Shoes/types";
 
 export const ShoesItems: FC = () => {
   const [shoes, setShoes] = useState<IShoesItem[]>([]);
