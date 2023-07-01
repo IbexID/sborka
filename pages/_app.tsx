@@ -12,7 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <Head>
-        <meta name="title" content="sborka project test task" />
+          <title>Sborka project test task</title>
+          <meta name="title" content="sborka project test task" />
         </Head>
         <Layout>
           <Component {...pageProps} />

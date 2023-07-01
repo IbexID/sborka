@@ -26,7 +26,13 @@ export const ShoesItem: FC<IShoesItem> = ({
   return (
     <div className={styles.shoesItem}>
       <Link href={href}>
-        <Image width={228} height={130} src={image} alt={title} />
+        <Image
+          loading="eager"
+          width={228}
+          height={130}
+          src={image}
+          alt={title}
+        />
       </Link>
       <div className={styles.shoesItem__info}>
         <Link className={styles.shoesItem__link} href={href}>
