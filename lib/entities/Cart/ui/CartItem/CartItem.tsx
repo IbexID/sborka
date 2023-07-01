@@ -19,7 +19,7 @@ export const CartItem: FC<IShoesItemInCart> = ({
       <Image src={image} width={90} height={51} alt={title + "cart"} />
       <div className={styles.cartItem__info}>
         <div className={styles.cartItem__infoName}>
-          <p>{title}</p>
+          <p className={styles.cartItem__infoTitle}>{title}</p>
           <DeleteButton
             className={styles.cartItem__delete}
             onClick={() => removeFromCart(id)}
