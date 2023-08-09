@@ -1,8 +1,3 @@
-## Тестовое задание на позицию «Frontend-разработчик на React»
-
-### [sborkaproject.ru](sborkaproject.ru)
-
-
 ## Требования:
 - Сверстайте адаптивный макет и напишите логику на React: https://www.figma.com/file/x83d5rk3QG4fRxMin3Qw7O/React-Test?node-id=0%3A1
 - Используйте TypeScript.
